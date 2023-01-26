@@ -34,13 +34,13 @@ tr:nth-child(even) { background-color: #dddddd; }
               <td>'.$post->getEmail().'</td>
               <td>'.$post->getTelephone().'</td>
               </tr>';          
-        } 
+              if(is_null($post)){
+                echo "<br> 
+                      No hay registros
+                      <br>";
+              }
+            } 
         
-        if(is_null($post)){
-          echo "<br> 
-                No hay registros
-                <br>";
-        }
         
     ?>
 </table>
