@@ -35,8 +35,8 @@ tr:nth-child(even) { background-color: #dddddd; }
         }
     ?>
 </table>
-<form action="http://192.168.0.25/finalproject/index/Form">
-    <input type="submit" value="Go to Form" />
+<form>
+<a class="action submit primary" href="<?php echo $block->getUrl('finalproject/index/form');?>" role="button">CRUD</a>
 </form>
 </body>
 </html>
