@@ -13,7 +13,7 @@ table {  font-family: arial, sans-serif;  border-collapse: collapse;  width: 100
 td, th {  border: 1px solid #dddddd;  text-align: left;  padding: 8px;  }
 tr:nth-child(even) { background-color: #dddddd; }
 .post-id{width:2%} .post-name{width:30%}
-a{
+.btn{
   margin-top: 30px;
 }
 </style>
@@ -27,18 +27,23 @@ a{
 
   </tr>
     <?php
+
+                $DataCollection = $block->getPostCollection(); 
+                if (!count($DataCollection)) {
+                echo '<h1>NO HAY DATOS</h1>';
+              }
         foreach ($block->getPostCollection() as $key=>$post){
-            echo '<tr>
-                    <td>'.$post->getFirst_name().'</td>
-                    <td>'.$post->getLast_name().'</td>
-                    <td>'.$post->getEmail().'</td>
-                    <td>'.$post->getTelephone().'</td>
-                  </tr>';
-        }
+              echo '<tr>
+              <td>'.$post->getFirst_name().'</td>
+              <td>'.$post->getLast_name().'</td>
+              <td>'.$post->getEmail().'</td>
+              <td>'.$post->getTelephone().'</td>
+              </tr>';          
+            } 
     ?>
 </table>
 <form>
-<a class="action submit primary" href="<?php echo $block->getUrl('finalproject/index/form');?>" role="button">FORM</a>
+<a class="btn action submit primary" href="<?php echo $block->getUrl('finalproject/index/form');?>" role="button">FORM</a>
 </form>
 </body>
 </html>
