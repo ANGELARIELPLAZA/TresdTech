@@ -55,11 +55,9 @@
                 <div class="primary">
                     <button type="submit" class="action submit primary" title="Save"><span><?= $block->
                         escapeHtmlAttr(__('Save')) ?></span></button>
+                    <input class="primary" href="<?php echo $block->getUrl('finalproject/index/crud');?>" type="submit" value="Go to crud" />
                 </div>
             </div>
         </form>
     </div>
 </div>
- <form action="<?php echo $block->getUrl('finalproject/index/crud');?>">
-    <input href="<?php echo $block->getUrl('finalproject/index/crud');?>" type="submit" value="Go to crud" />
-</form>
