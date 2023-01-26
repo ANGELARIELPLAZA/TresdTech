@@ -28,7 +28,7 @@ a{
   </tr>
     <?php
         foreach ($block->getPostCollection() as $key=>$post){
-            if(is_null($post)){
+            if(!is_null($post)){
               echo '<tr>
               <td>'.$post->getFirst_name().'</td>
               <td>'.$post->getLast_name().'</td>
