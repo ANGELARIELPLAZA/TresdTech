@@ -29,7 +29,7 @@ tr:nth-child(even) { background-color: #dddddd; }
     <?php
 
                 $DataCollection = $block->getPostCollection(); 
-                if (count($DataCollection)) {
+                if (!count($DataCollection)) {
                   
                 echo 'data';
         foreach ($block->getPostCollection() as $key=>$post){
