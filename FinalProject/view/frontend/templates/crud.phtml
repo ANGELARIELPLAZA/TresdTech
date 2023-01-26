@@ -29,20 +29,18 @@ a{
     <?php
         foreach ($block->getPostCollection() as $key=>$post){
             if(isset($post)){
-          echo "This is null <br>";
+              echo '<tr>
+              <td>'.$post->getFirst_name().'</td>
+              <td>'.$post->getLast_name().'</td>
+              <td>'.$post->getEmail().'</td>
+              <td>'.$post->getTelephone().'</td>
+              </tr>';
         }else{
-          echo "This not null <br>";
-
+          echo "No hay registros <br>";
         }
           
-              echo '<tr>
-                    <td>'.$post->getFirst_name().'</td>
-                    <td>'.$post->getLast_name().'</td>
-                    <td>'.$post->getEmail().'</td>
-                    <td>'.$post->getTelephone().'</td>
-                    </tr>';
+             
         }
-        echo $post->getLast_name();
         
     ?>
 </table>
