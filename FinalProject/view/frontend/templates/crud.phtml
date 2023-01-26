@@ -35,7 +35,7 @@ a{
               <td>'.$post->getEmail().'</td>
               <td>'.$post->getTelephone().'</td>
               </tr>';
-        }else{
+        }else if(is_null($post->getFirst_name())){
           echo "<br> 
                 <h1> No hay registros </h1>
                 <br>";
