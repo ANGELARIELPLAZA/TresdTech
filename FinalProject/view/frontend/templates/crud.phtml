@@ -13,7 +13,7 @@ table {  font-family: arial, sans-serif;  border-collapse: collapse;  width: 100
 td, th {  border: 1px solid #dddddd;  text-align: left;  padding: 8px;  }
 tr:nth-child(even) { background-color: #dddddd; }
 .post-id{width:2%} .post-name{width:30%}
-a{
+.btn{
   margin-top: 30px;
 }
 </style>
@@ -48,7 +48,7 @@ a{
     ?>
 </table>
 <form>
-<a class="action submit primary" href="<?php echo $block->getUrl('finalproject/index/form');?>" role="button">FORM</a>
+<a class="btn action submit primary" href="<?php echo $block->getUrl('finalproject/index/form');?>" role="button">FORM</a>
 </form>
 </body>
 </html>
