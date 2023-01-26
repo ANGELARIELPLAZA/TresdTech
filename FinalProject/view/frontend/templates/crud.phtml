@@ -34,7 +34,7 @@ tr:nth-child(even) { background-color: #dddddd; }
               <td>'.$post->getEmail().'</td>
               <td>'.$post->getTelephone().'</td>
               </tr>';          
-              if(!is_null($block->getPostCollection())){
+              if(is_null($block->getPostCollection())){
                 echo "<br> 
                       No hay registros
                       <br>";
